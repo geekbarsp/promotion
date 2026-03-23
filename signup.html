@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link & Ashe | Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .auth-form {
+            max-width: 400px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px;
+        }
+        .auth-input {
+            width: 100%; padding: 15px; border-radius: 8px; border: 1px solid var(--neon-purple);
+            background: rgba(0,0,0,0.5); color: white; outline: none; transition: 0.3s;
+        }
+        .auth-input:focus { box-shadow: 0 0 10px var(--neon-purple); }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <img src="assets/logols.png" alt="Logo" class="mini-logo">
+            <nav><a href="index.html">← BACK TO HOME</a></nav>
+        </div>
+    </header>
+
+    <div class="page-container" style="display: flex; align-items: center; justify-content: center; min-height: 100vh;">
+        <div class="glass-card" style="width: 100%; max-width: 500px; padding: 50px;">
+            <h1 class="pixel-heading" style="color: var(--neon-purple); text-align: center;">JOIN THE FIRM</h1>
+            <p style="text-align: center; margin-bottom: 30px;">Create your developer profile</p>
+            
+            <form class="auth-form" action="index.html">
+                <input type="text" class="auth-input" placeholder="Username" required>
+                <input type="email" class="auth-input" placeholder="Email Address" required>
+                <input type="password" class="auth-input" placeholder="Password" required>
+                <button type="submit" class="btn" style="width: 100%; font-size: 1.2rem; margin-top: 10px;">SIGN UP</button>
+            </form>
+            <p style="text-align: center; margin-top: 20px;">Already have an account? <a href="signin.html" style="color: var(--neon-purple);">Sign In</a></p>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
