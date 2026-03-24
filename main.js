@@ -234,3 +234,39 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.reload(); // Force a refresh to re-trigger security
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    function setupCarousel(viewportId, trackId) {
+        const viewport = document.getElementById(viewportId);
+        const track = document.getElementById(trackId);
+        if (!viewport || !track) return;
+
+        let currentX = 0;
+        let isHovered = false;
+        const scrollSpeed = 0.8; // Smooth, steady crawl
+
+        viewport.addEventListener('mouseenter', () => isHovered = true);
+        viewport.addEventListener('mouseleave', () => isHovered = false);
+
+        function animate() {
+            if (!isHovered && track.children.length > 0) {
+                currentX -= scrollSpeed;
+                track.style.transform = `translateX(${currentX}px)`;
+
+                const firstCard = track.firstElementChild;
+                if (firstCard) {
+                    const cardTotalWidth = firstCard.offsetWidth + 40; // 40 is the CSS gap
+                    if (Math.abs(currentX) >= cardTotalWidth) {
+                        track.appendChild(firstCard);
+                        currentX += cardTotalWidth;
+                        track.style.transform = `translateX(${currentX}px)`;
+                    }
+                }
+            }
+            requestAnimationFrame(animate);
+        }
+        requestAnimationFrame(animate);
+    }
+
+    setupCarousel('latest-viewport', 'latest-track');
+});

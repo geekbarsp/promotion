@@ -8,26 +8,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="header-inner">
-            <div class="logo-container">
-                <img src="assets/logols.png" alt="Logo" class="mini-logo">
-                <span>LINK & ASHE</span>
-            </div>
-            <nav>
-                <a href="index.html">HOME</a>
-                <a href="media.html">MEDIA</a>
-                <a href="news.html" class="active">NEWS</a>
-                <a href="support.html">SUPPORT</a>
-                <a href="merch.html">MERCH</a>
-                <a href="info.html">INFO</a>
-            </nav>
-            <nav class="auth-links">
-                <a href="signin.html">SIGN IN</a>
-                <a href="signup.html" style="color: var(--neon-purple);">SIGN UP</a>
-            </nav>
+   <header>
+    <div class="header-inner">
+        <div class="logo-container">
+            <img src="assets/logols.png" alt="Logo" class="mini-logo">
+            <span>LINK & ASHE</span>
         </div>
-    </header>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="main-nav">
+            <a href="index.html">HOME</a>
+            <a href="media.html">MEDIA</a>
+            <a href="news.html">NEWS</a>
+            <a href="support.html">SUPPORT</a>
+            <a href="merch.html">MERCH</a>
+            <a href="info.html">INFO</a>
+            
+            <div class="mobile-auth">
+                <a href="signin.html">SIGN IN</a>
+                <a href="signup.html">SIGN UP</a>
+            </div>
+            
+        </nav>
+
+        <nav class="auth-links">
+            <a href="signin.html">SIGN IN</a>
+            <a href="signup.html">SIGN UP</a>
+        </nav>
+    </div>
+</header>
 
     <div class="page-container">
         <section style="padding: 120px 5% 40px 5%; text-align: center;">
