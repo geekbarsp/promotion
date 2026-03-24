@@ -228,30 +228,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 500);
   })();
 
-(function() {
-    function l() {
-        const d = new Date();
-        debugger; // This pauses their browser if DevTools is open
-        if (new Date() - d > 100) {
-            window.location.href = "buzz-off.html";
-        }
-        setTimeout(l, 50);
-    }
-    l();
-})();
-
-window.onbeforeunload = function() {
-    // This helps prevent the browser from keeping a clean state in the back-cache
-    null;
-};
-
-if (window.performance && window.performance.navigation.type === 2) {
-    // If type is 2, the page was accessed via back/forward
-    window.location.reload();
-}
-
-setInterval(() => {
-    console.clear();
-    console.log("%c TERMINAL PROTECTED ", "color: #bc13fe; background: #000; font-size: 20px; font-weight: bold;");
-}, 1000);
-  
