@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Link & Ashe | Info</title>
+    <title>Link & Ashe | Deep Dive</title>
     <link href="https://fonts.googleapis.com/css2?family=VT323&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
+<header>
     <div class="header-inner">
-        <div style="display: flex; align-items: center; gap: 10px;">
+        <div class="logo-container">
             <img src="assets/logols.png" alt="Logo" class="mini-logo">
+            <span>LINK & ASHE</span>
         </div>
 
         <nav>
@@ -24,52 +25,124 @@
             <a href="info.html" class="active">INFO</a>
         </nav>
 
-        <nav>
+        <nav class="auth-links">
             <a href="signin.html">SIGN IN</a>
-            <a href="signup.html">SIGN UP</a>
+            <a href="signup.html" style="color: var(--neon-purple);">SIGN UP</a>
         </nav>
     </div>
 </header>
 
 <div class="page-container">
-    <section class="container" style="text-align: center; border-bottom: 1px solid rgba(188, 19, 254, 0.2); padding-bottom: 60px;">
-        <h1 class="section-title">What is a GAME DEVELOPER?</h1>
-        <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 40px; color: rgba(255,255,255,0.8);">
-            A game developer is a person who creates video games. They use a mix of programming, art, design, and storytelling to build games that people can play on computers, consoles, or mobile phones.
-        </p>
-        <a href="#why-dev" class="scroll-pill">SCROLL DOWN ↓</a>
+    <section class="hero" style="height: 70vh; background: linear-gradient(rgba(5,1,10,0.85), rgba(5,1,10,0.85)), url('assets/gamedevbg.png') center/cover;">
+        <div class="hero-text">
+            <p class="neon-text" style="letter-spacing: 5px; font-weight: bold;">SYSTEM STATUS: ONLINE</p>
+            <h1 class="pixel-heading">THE <span class="neon-text">DEV</span> BEYOND THE SCREEN</h1>
+            <p style="max-width: 800px; margin: 0 auto; line-height: 1.8;">Video game development is more than just "making games." It is an interdisciplinary field that pushes the boundaries of hardware, artificial intelligence, and human psychology to create digital worlds that feel alive.</p>
+            <a href="#pathways" class="scroll-pill">EXPLORE PATHWAYS ↓</a>
+        </div>
     </section>
 
-    <section id="why-dev" class="container" style="padding: 80px 0;">
-        <div class="glass-card" style="max-width: 900px; margin: 0 auto; text-align: left; padding: 50px;">
-            <h2 class="section-title" style="text-align: left; font-size: 2.5rem;">Why become a GAME DEVELOPER?</h2>
-            
-            <div class="why-grid" style="grid-template-columns: 1fr; gap: 30px;">
-                <div>
-                    <h3 style="color: var(--neon-purple); margin-bottom: 10px;">Turn Your Ideas into Games</h3>
-                    <p>Game development allows you to turn your imagination into something real and playable. If you have ideas for characters, stories, or worlds, you can bring them to life.</p>
-                </div>
-                <div>
-                    <h3 style="color: var(--neon-purple); margin-bottom: 10px;">High Demand in the Tech Industry</h3>
-                    <p>The gaming industry is one of the fastest-growing in the world. Millions of people play games every day, creating many job opportunities in PC, console, mobile, and VR.</p>
-                </div>
-                <div>
-                    <h3 style="color: var(--neon-purple); margin-bottom: 10px;">Can Work Remotely</h3>
-                    <p>Many game developers work from home or anywhere with an internet connection. You can collaborate with teams from different countries without needing to be in a physical office.</p>
-                </div>
-                <div>
-                    <h3 style="color: var(--neon-purple); margin-bottom: 10px;">Can Create Your Own Indie Games</h3>
-                    <p>You don't need a big company to make a game. With free tools like Unity, Unreal Engine, or Godot, you can create and publish your own unique games.</p>
-                </div>
+    <section id="pathways" class="container" style="padding: 100px 5%;">
+        <h2 class="section-title">CAREER <span class="neon-text">PATHWAYS</span></h2>
+        <div class="why-row">
+            <div class="why-card">
+                <div class="card-icon">👑</div>
+                <h3>AAA STUDIO</h3>
+                <p>Work for giants like Rockstar or Ubisoft. Specialize in one specific area (like water physics or character hair) on massive, multi-million dollar projects.</p>
             </div>
-            
-            <div style="text-align: center; margin-top: 50px;">
-                <a href="index.html" class="btn">← BACK TO HOME</a>
+            <div class="why-card">
+                <div class="card-icon">🐺</div>
+                <h3>INDIE DEV</h3>
+                <p>The "Lone Wolf" route. Wear every hat—coder, artist, and marketer. High risk, but total creative freedom and 100% ownership.</p>
+            </div>
+            <div class="why-card">
+                <div class="card-icon">🏢</div>
+                <h3>ADVERGAMING</h3>
+                <p>Creating interactive experiences for brands. High demand in marketing agencies for mobile apps and web-based games.</p>
+            </div>
+            <div class="why-card">
+                <div class="card-icon">🔬</div>
+                <h3>SERIOUS GAMES</h3>
+                <p>Games for good. Developing simulations for medical training, military strategy, or complex educational tools.</p>
             </div>
         </div>
     </section>
+
+    <section class="container" style="padding: 80px 5%; background: rgba(20, 0, 40, 0.3);">
+        <h2 class="section-title">CHOOSE YOUR <span class="neon-text">ENGINE</span></h2>
+        <div class="glass-card" style="max-width: 1100px; margin: 0 auto; overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; text-align: left; color: white;">
+                <thead style="border-bottom: 2px solid var(--neon-purple);">
+                    <tr>
+                        <th style="padding: 20px;">ENGINE</th>
+                        <th style="padding: 20px;">LANGUAGE</th>
+                        <th style="padding: 20px;">BEST FOR</th>
+                        <th style="padding: 20px;">LEARNING CURVE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid rgba(188, 19, 254, 0.2);">
+                        <td style="padding: 20px; font-weight: bold;">Unreal Engine</td>
+                        <td style="padding: 20px;">C++ / Blueprints</td>
+                        <td style="padding: 20px;">High-end AAA, Photorealism</td>
+                        <td style="padding: 20px; color: #ff32ff;">Steep</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(188, 19, 254, 0.2);">
+                        <td style="padding: 20px; font-weight: bold;">Unity</td>
+                        <td style="padding: 20px;">C#</td>
+                        <td style="padding: 20px;">Mobile, Indie, 2D/3D Hybrid</td>
+                        <td style="padding: 20px; color: #00ffcc;">Moderate</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(188, 19, 254, 0.2);">
+                        <td style="padding: 20px; font-weight: bold;">Godot</td>
+                        <td style="padding: 20px;">GDScript / C#</td>
+                        <td style="padding: 20px;">Open Source, lightweight 2D</td>
+                        <td style="padding: 20px; color: #00ffcc;">Beginner-Friendly</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="container" style="padding: 100px 5%;">
+        <h2 class="section-title">THE <span class="neon-text">ARSENAL</span></h2>
+        <div class="grid-container">
+            <div class="glass-card">
+                <img src="assets/physics.gif" alt="Physics Engine">
+                <div style="padding: 20px;">
+                    <h3 class="neon-text">PHYSICS ENGINES</h3>
+                    <p>Simulating gravity, collision, and fluid dynamics to make the world feel "heavy" and responsive.</p>
+                </div>
+            </div>
+            <div class="glass-card">
+                <img src="assets/procedural.gif" alt="Artificial Intelligence">
+                <div style="padding: 20px;">
+                    <h3 class="neon-text">PROCEDURAL GEN</h3>
+                    <p>Using algorithms to create infinite landscapes, like in No Man's Sky or Minecraft.</p>
+                </div>
+            </div>
+            <div class="glass-card">
+                <img src="assets/networking.gif" alt="Multiplayer">
+                <div style="padding: 20px;">
+                    <h3 class="neon-text">NETWORKING</h3>
+                    <p>Managing latency and synchronization so players across the globe can play in the same room.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner enhanced-height" style="border-top: 5px solid var(--neon-purple);">
+        <h2 class="pixel-heading">READY TO <span class="neon-text">BUILD</span>?</h2>
+        <p class="pixel-subheading" style="margin-bottom: 30px;">The world is waiting for your story.</p>
+        <div style="display: flex; gap: 20px; justify-content: center;">
+            <a href="signup.html" class="go-to-merch-glow">START DEVELOPING</a>
+            <a href="index.html" class="go-to-news">RETURN TO BASE</a>
+        </div>
+        <p style="margin-top: 50px; font-family: var(--font-pixel); color: rgba(255,255,255,0.4);">[ END OF LOG ]</p>
+    </section>
 </div>
 
+<div id="custom-cursor"></div>
 <script src="main.js"></script>
 </body>
 </html>

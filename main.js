@@ -195,8 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // 3. Silent DevTools Detection
-  // This detects if the window is resized (common when DevTools opens) 
-  // or if the console is being "probed."
+
   (function() {
     const devtools = {
       isOpen: false,

@@ -3,42 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Link & Ashe | Sign Up</title>
+    <title>Link & Ashe | Initialize Identity</title>
     <link href="https://fonts.googleapis.com/css2?family=VT323&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
+        body {
+            background-image: radial-gradient(circle at 50% 50%, #1a022d 0%, #05010a 100%);
+            overflow: hidden;
+        }
+
+        /* Ambient scanlines */
+        body::before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+            z-index: 2;
+            background-size: 100% 2px;
+            pointer-events: none;
+        }
+
         .auth-form {
-            max-width: 400px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px;
+            display: flex; 
+            flex-direction: column; 
+            gap: 20px;
+            position: relative;
+            z-index: 5;
         }
+
         .auth-input {
-            width: 100%; padding: 15px; border-radius: 8px; border: 1px solid var(--neon-purple);
-            background: rgba(0,0,0,0.5); color: white; outline: none; transition: 0.3s;
+            width: 100%; 
+            padding: 18px; 
+            border-radius: 4px; 
+            border: 1px solid rgba(0, 255, 204, 0.4); /* Teal theme for creation */
+            background: rgba(10, 2, 20, 0.8); 
+            color: #ff32ff; 
+            outline: none; 
+            transition: 0.3s;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 1px;
         }
-        .auth-input:focus { box-shadow: 0 0 10px var(--neon-purple); }
+
+        .auth-input:focus { 
+            border-color: #00ffcc;
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+            background: rgba(5, 30, 30, 0.9);
+        }
+
+        .auth-input::placeholder {
+            color: rgba(0, 255, 204, 0.5);
+            font-family: 'VT323', monospace;
+            font-size: 1.2rem;
+        }
+
+        /* Initializing Pulse Bar */
+        .init-bar {
+            width: 100%;
+            height: 4px;
+            background: rgba(255,255,255,0.05);
+            position: relative;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        .init-progress {
+            width: 40%;
+            height: 100%;
+            background: #00ffcc;
+            box-shadow: 0 0 10px #00ffcc;
+            animation: loading-pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes loading-pulse {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(300%); }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="header-inner">
-            <img src="assets/logols.png" alt="Logo" class="mini-logo">
-            <nav><a href="index.html">← BACK TO HOME</a></nav>
+            <div class="logo-container">
+                <img src="assets/logols.png" alt="Logo" class="mini-logo">
+                <span style="font-family: var(--font-pixel); letter-spacing: 2px; color: white;">L&A SECURE</span>
+            </div>
+            <nav><a href="index.html" style="font-family: var(--font-pixel); color: #ff32ff;">[ ← DISCONNECT ]</a></nav>
         </div>
     </header>
 
-    <div class="page-container" style="display: flex; align-items: center; justify-content: center; min-height: 100vh;">
-        <div class="glass-card" style="width: 100%; max-width: 500px; padding: 50px;">
-            <h1 class="pixel-heading" style="color: var(--neon-purple); text-align: center;">JOIN THE FIRM</h1>
-            <p style="text-align: center; margin-bottom: 30px;">Create your developer profile</p>
+    <div class="page-container" style="display: flex; align-items: center; justify-content: center; min-height: 90vh;">
+        <div class="glass-card" style="width: 100%; max-width: 500px; padding: 60px 40px; border: 1px solid rgba(0, 255, 204, 0.2); position: relative; background: rgba(5, 1, 10, 0.9); box-shadow: 0 0 50px rgba(0,0,0,1);">
+            
+            <div style="text-align: center; margin-bottom: 20px;">
+                <h1 class="pixel-heading" style="font-size: 3rem; color: white; margin-bottom: 10px;">NEW <span class="neon-text" style="color: #00ffcc; text-shadow: 0 0 10px #00ffcc;">ENTITY</span></h1>
+                <div class="init-bar"><div class="init-progress"></div></div>
+                <div style="font-family: var(--font-pixel); color: #ff32ff; letter-spacing: 2px; font-size: 0.9rem;">
+                    [ INITIALIZING REGISTRATION SEQUENCE ]
+                </div>
+            </div>
             
             <form class="auth-form" action="index.html">
-                <input type="text" class="auth-input" placeholder="Username" required>
-                <input type="email" class="auth-input" placeholder="Email Address" required>
-                <input type="password" class="auth-input" placeholder="Password" required>
-                <button type="submit" class="btn" style="width: 100%; font-size: 1.2rem; margin-top: 10px;">SIGN UP</button>
+                <div style="position: relative;">
+                    <span style="position: absolute; right: 15px; top: 18px; color: #00ffcc; font-family: var(--font-pixel); font-size: 0.8rem;">[NAME]</span>
+                    <input type="text" class="auth-input" placeholder="USERNAME" required>
+                </div>
+                
+                <div style="position: relative;">
+                    <span style="position: absolute; right: 15px; top: 18px; color: #00ffcc; font-family: var(--font-pixel); font-size: 0.8rem;">[MAIL]</span>
+                    <input type="email" class="auth-input" placeholder="EMAIL_ADDRESS" required>
+                </div>
+
+                <div style="position: relative;">
+                    <span style="position: absolute; right: 15px; top: 18px; color: #00ffcc; font-family: var(--font-pixel); font-size: 0.8rem;">[PASS]</span>
+                    <input type="password" class="auth-input" placeholder="SECURE_PHRASE" required>
+                </div>
+
+                <div style="margin: 10px 0;">
+                    <label style="color: gray; font-size: 0.75rem; display: flex; align-items: flex-start; gap: 10px; cursor: pointer; line-height: 1.4;">
+                        <input type="checkbox" style="accent-color: #00ffcc; margin-top: 3px;" required> 
+                        I ACCEPT THE LINK & ASHE NEURAL INTERFACE PROTOCOLS AND DATA HARVESTING TERMS.
+                    </label>
+                </div>
+
+                <button type="submit" class="btn" style="width: 100%; font-size: 1.5rem; letter-spacing: 3px; padding: 15px; background: none; border: 1px solid #00ffcc; color: #00ffcc; box-shadow: inset 0 0 10px rgba(0, 255, 204, 0.1); margin-top: 10px;">
+                    REGISTER
+                </button>
             </form>
-            <p style="text-align: center; margin-top: 20px;">Already have an account? <a href="signin.html" style="color: var(--neon-purple);">Sign In</a></p>
+
+            <div style="text-align: center; margin-top: 35px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 25px;">
+                <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">
+                    EXISTING ID DETECTED? 
+                    <a href="signin.html" style="color: #ff32ff; text-decoration: none; font-family: var(--font-pixel); margin-left: 10px; border-bottom: 1px solid #ff32ff;">ACCESS VAULT</a>
+                </p>
+            </div>
+
+            <div style="margin-top: 40px; font-family: var(--font-pixel); font-size: 0.65rem; color: rgba(0, 255, 204, 0.3); text-align: center;">
+                ENCRYPTION: AES-256 // BIT_ROT: 0% // PACKET_LOSS: 0
+            </div>
         </div>
     </div>
+
     <script src="main.js"></script>
 </body>
 </html>

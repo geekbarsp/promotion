@@ -110,20 +110,20 @@ nav a.active {
             transparent 15%);
     background-repeat: no-repeat;
     pointer-events: none;
-    
+
     /* This sits ABOVE the gifs but BELOW the text */
-    z-index: 5; 
+    z-index: 5;
     filter: drop-shadow(0 0 15px #ff32ff) drop-shadow(0 0 30px rgba(255, 50, 255, 0.5));
 }
 
 /* --- 3. Text, Buttons, & Center Logo (Top Layer) --- */
-.hero-text, 
-.pixel-heading, 
-.main-cta, 
+.hero-text,
+.pixel-heading,
+.main-cta,
 .center-logo {
     position: relative;
     /* This ensures they stay on the very top */
-    z-index: 10; 
+    z-index: 10;
 }
 
 .pixel-heading {
@@ -146,7 +146,7 @@ nav a.active {
 .overlay-graphic {
     position: absolute;
     /* CHANGED: Set to 1 so it sits UNDER the purple-stripes (z-index: 2) */
-    z-index: 1; 
+    z-index: 1;
     pointer-events: none;
 }
 
@@ -154,20 +154,22 @@ nav a.active {
     top: 100px;
     left: 50px;
     width: 220px;
-    opacity: 1; /* Keeping your 100% opacity request */
+    opacity: 1;
+    /* Keeping your 100% opacity request */
 }
 
 .lower-left {
     bottom: 40px;
     left: 40px;
     width: 300px;
-    opacity: 1; /* Keeping your 100% opacity request */
+    opacity: 1;
+    /* Keeping your 100% opacity request */
 }
 
 .overlay-graphic img {
     width: 100%;
     /* Keeping your "5 full corner" radius request */
-    border-radius: 15px; 
+    border-radius: 15px;
     display: block;
 }
 
@@ -375,11 +377,12 @@ footer {
     padding: 60px 10%;
 
     /* Background Setup */
-     background-color: var(--dark-purple);
+    background-color: var(--dark-purple);
     /* Make sure to name your background image this */
     background-size: cover;
     background-position: center;
-    border-top: 3px solid var(--neon-purple); /* CHANGED from blue to purple */
+    border-top: 3px solid var(--neon-purple);
+    /* CHANGED from blue to purple */
     border-bottom: 3px solid var(--neon-purple);
 }
 
@@ -407,17 +410,21 @@ footer {
 /* --- Scroll Down Pill Button --- */
 .scroll-pill {
     /* Centering Logic */
-    display: table;            /* Shrinks to fit text width */
-    margin: 30px auto;         /* Centers horizontally with space above/below */
-    
+    display: table;
+    /* Shrinks to fit text width */
+    margin: 30px auto;
+    /* Centers horizontally with space above/below */
+
     /* Matching Styling with Merch Button */
     background: black;
     color: white;
-    padding: 16px 45px;        /* Increased to match previous button size */
+    padding: 16px 45px;
+    /* Increased to match previous button size */
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1rem;         /* Scaled up text */
+    font-size: 1.1rem;
+    /* Scaled up text */
     border: 2px solid var(--neon-purple-bright);
     box-shadow: 0 0 20px var(--neon-purple-glow), inset 0 0 10px rgba(208, 0, 255, 0.4);
     transition: all 0.3s ease;
@@ -438,8 +445,8 @@ footer {
     position: relative;
     padding: 120px 5%;
     /* Update this path to your uploaded background image */
-    background: linear-gradient(rgba(5, 1, 10, 0.4), rgba(5, 1, 10, 0.4)), 
-                url('assets/whybg.png') center/cover no-repeat;
+    background: linear-gradient(rgba(5, 1, 10, 0.4), rgba(5, 1, 10, 0.4)),
+        url('assets/whybg.png') center/cover no-repeat;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -471,14 +478,16 @@ footer {
 /* Row Layout for 4 Items */
 .why-row {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Forces 4 cards in one horizontal row */
+    grid-template-columns: repeat(4, 1fr);
+    /* Forces 4 cards in one horizontal row */
     gap: 20px;
     align-items: stretch;
 }
 
 /* The Vertical Glass Cards */
 .why-card {
-    background: rgba(30, 0, 60, 0.35); /* Transparent purple-tinted glass */
+    background: rgba(30, 0, 60, 0.35);
+    /* Transparent purple-tinted glass */
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(188, 19, 254, 0.3);
@@ -489,7 +498,8 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    min-height: 450px; /* Makes the cards tall and uniform */
+    min-height: 450px;
+    /* Makes the cards tall and uniform */
 }
 
 .why-card:hover {
@@ -502,7 +512,7 @@ footer {
 .card-icon {
     font-size: 3.5rem;
     margin-bottom: 30px;
-    filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
 }
 
 .why-card h3 {
@@ -547,13 +557,23 @@ footer {
 
 /* Responsiveness: Switch to 2x2 or 1x4 on smaller screens */
 @media (max-width: 1100px) {
-    .why-row { grid-template-columns: repeat(2, 1fr); }
-    .why-title { font-size: 3rem; }
+    .why-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-title {
+        font-size: 3rem;
+    }
 }
 
 @media (max-width: 650px) {
-    .why-row { grid-template-columns: 1fr; }
-    .why-card { min-height: auto; }
+    .why-row {
+        grid-template-columns: 1fr;
+    }
+
+    .why-card {
+        min-height: auto;
+    }
 }
 
 /* Responsive adjustment for mobile */
@@ -677,7 +697,8 @@ button,
 }
 
 .carousel-slide {
-    min-width: calc(33.333% - 14px); /* Show 3 items at a time */
+    min-width: calc(33.333% - 14px);
+    /* Show 3 items at a time */
     box-sizing: border-box;
 }
 
@@ -713,7 +734,8 @@ button,
     position: absolute;
     top: 40%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.6); /* Slight black transparent */
+    background: rgba(0, 0, 0, 0.6);
+    /* Slight black transparent */
     color: white;
     border: 1px solid var(--neon-purple);
     border-radius: 50%;
@@ -736,16 +758,23 @@ button,
     transform: translateY(-50%) scale(1.1);
 }
 
-.prev-btn { left: -25px; }
-.next-btn { right: -25px; }
+.prev-btn {
+    left: -25px;
+}
+
+.next-btn {
+    right: -25px;
+}
 
 /* Go To News Button */
 .latest-footer {
     display: flex;
-    justify-content: center; /* Changed from flex-end to center */
+    justify-content: center;
+    /* Changed from flex-end to center */
     max-width: 1200px;
     margin: 30px auto 0 auto;
-    padding: 0; /* Remove right padding that offsets the center */
+    padding: 0;
+    /* Remove right padding that offsets the center */
 }
 
 .go-to-news {
@@ -772,28 +801,43 @@ button,
 
 /* Carousel Responsiveness */
 @media (max-width: 900px) {
-    .carousel-slide { min-width: calc(50% - 10px); }
+    .carousel-slide {
+        min-width: calc(50% - 10px);
+    }
 }
+
 @media (max-width: 600px) {
-    .carousel-slide { min-width: 100%; }
-    .prev-btn { left: 10px; }
-    .next-btn { right: 10px; }
+    .carousel-slide {
+        min-width: 100%;
+    }
+
+    .prev-btn {
+        left: 10px;
+    }
+
+    .next-btn {
+        right: 10px;
+    }
 }
 
 /* =========================================
    THE SOUVENIR SECTION (FIXED LAYOUT)
 ========================================= */
 :root {
-    --neon-purple-bright: #d000ff; /* Bright purple for lines */
-    --neon-purple-glow: rgba(208, 0, 255, 0.7); /* Glow color */
+    --neon-purple-bright: #d000ff;
+    /* Bright purple for lines */
+    --neon-purple-glow: rgba(208, 0, 255, 0.7);
+    /* Glow color */
 }
 
 .souvenir-section.fixed-layout {
     position: relative;
-    padding: 60px 0; /* Vertical padding */
+    padding: 60px 0;
+    /* Vertical padding */
     background: radial-gradient(circle at 50% 50%, #1a022b 0%, #05010a 100%);
     text-align: center;
-    overflow: hidden; /* Contains elements */
+    overflow: hidden;
+    /* Contains elements */
 }
 
 /* 1. Missing Neon Lines (Fixed Position) */
@@ -807,18 +851,26 @@ button,
     z-index: 5;
 }
 
-.neon-line.top { top: 0; }
-.neon-line.bottom { bottom: 0; }
+.neon-line.top {
+    top: 0;
+}
+
+.neon-line.bottom {
+    bottom: 0;
+}
 
 /* 2. Scaled Container and Title */
 .souvenir-container {
-    max-width: 1400px; /* Limits overall size for fix */
+    max-width: 1400px;
+    /* Limits overall size for fix */
     margin: 0 auto;
-    padding: 0 40px; /* Horizontal cushion */
+    padding: 0 40px;
+    /* Horizontal cushion */
 }
 
 .pixel-heading.scale-title {
-    font-size: 3rem; /* Slightly smaller title */
+    font-size: 3rem;
+    /* Slightly smaller title */
     margin-bottom: 20px;
 }
 
@@ -835,7 +887,8 @@ button,
     display: flex;
     flex-direction: column;
     gap: 15px;
-    flex: 1; /* Left/Right take even space */
+    flex: 1;
+    /* Left/Right take even space */
 }
 
 /* Card Scaling (Small Fix) */
@@ -843,7 +896,7 @@ button,
     border: 1px solid rgba(188, 19, 254, 0.4);
     border-radius: 12px;
     overflow: hidden;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     transition: 0.3s ease;
 }
 
@@ -855,21 +908,24 @@ button,
 
 .souvenir-item.scale-card img {
     width: 100%;
-    height: 160px; /* Reduced fixed height for small fix */
+    height: 160px;
+    /* Reduced fixed height for small fix */
     object-fit: cover;
     display: block;
 }
 
 .souvenir-item.scale-card p {
     padding: 10px;
-    font-size: 0.85rem; /* Smaller text */
+    font-size: 0.85rem;
+    /* Smaller text */
     color: var(--text-light);
     margin: 0;
 }
 
 /* 4. Center Spot (New Layout Insertion) */
 .souvenir-center-spot.scale-center {
-    flex: 1.2; /* Center area takes more width */
+    flex: 1.2;
+    /* Center area takes more width */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -877,9 +933,10 @@ button,
 }
 
 .merch-focus-img {
-    max-width: 85%; /* Scaled smaller insertion */
+    max-width: 85%;
+    /* Scaled smaller insertion */
     border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     transition: 0.3s;
 }
 
@@ -888,28 +945,35 @@ button,
 }
 
 .center-logo-small {
-    height: 50px; /* Adjust logo height */
+    height: 50px;
+    /* Adjust logo height */
     width: auto;
 }
 
 .souvenir-lower-layout {
     display: flex;
-    flex-direction: column; /* This stacks text on top, button on bottom */
-    align-items: center;    /* This centers both the text block and the button block */
-    text-align: center;     /* This centers the actual lines of text */
-    gap: 30px;              /* Space between the text and the button */
+    flex-direction: column;
+    /* This stacks text on top, button on bottom */
+    align-items: center;
+    /* This centers both the text block and the button block */
+    text-align: center;
+    /* This centers the actual lines of text */
+    gap: 30px;
+    /* Space between the text and the button */
     max-width: 1200px;
     margin: 40px auto 0 auto;
 }
 
 .souvenir-text-wrapper {
-    width: 100%;            /* Allows text to use the full width before centering */
-    max-width: 800px;       /* Keeps the text from getting too wide/ugly */
+    width: 100%;
+    /* Allows text to use the full width before centering */
+    max-width: 800px;
+    /* Keeps the text from getting too wide/ugly */
 }
 
 .souvenir-btn-wrapper {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     width: 100%;
 }
 
@@ -942,7 +1006,8 @@ button,
 /* --- Individual Positioning Logic --- */
 
 .main-cta {
-    margin-top: 20px; /* Space in Hero section */
+    margin-top: 20px;
+    /* Space in Hero section */
 }
 
 .contact-btn {
@@ -950,33 +1015,39 @@ button,
     bottom: 40px;
     right: 40px;
     z-index: 2000;
-    padding: 12px 25px; /* Slightly smaller for floating */
+    padding: 12px 25px;
+    /* Slightly smaller for floating */
 }
 
 .scroll-pill {
     display: table;
     margin: 30px auto;
 }
+
 /* 6. Responsiveness (Crucial for Fixed-Size Request) */
 @media (max-width: 1000px) {
     .souvenir-main-content {
         flex-direction: column;
         gap: 20px;
     }
+
     .souvenir-sub-grid {
         flex-direction: row;
         width: 100%;
         gap: 15px;
     }
+
     .souvenir-center-spot.scale-center {
         width: 80%;
         margin: 0 auto;
     }
+
     .souvenir-lower-layout {
         flex-direction: column;
         text-align: center;
         gap: 20px;
     }
+
     .souvenir-btn-wrapper {
         justify-content: center;
     }
@@ -985,15 +1056,18 @@ button,
 /* --- CTA Banner Styling --- */
 .cta-banner {
     position: relative;
-    background: url('assets/cta-bg.jpg') no-repeat center center/cover; /* Use the background image from your screenshot */
-    background-color: #2a0033; /* Dark purple fallback */
+    background: url('assets/cta-bg.jpg') no-repeat center center/cover;
+    /* Use the background image from your screenshot */
+    background-color: #2a0033;
+    /* Dark purple fallback */
     padding: 60px 20px;
     text-align: center;
     color: white;
 }
 
 .cta-banner .pixel-heading {
-    font-family: 'Pixel Font', sans-serif; /* Use your specific pixel font */
+    font-family: 'Pixel Font', sans-serif;
+    /* Use your specific pixel font */
     font-size: 3.5rem;
     margin-bottom: 10px;
     text-shadow: 2px 2px #000;
@@ -1007,10 +1081,12 @@ button,
 
 /* --- Exact Image-Match Footer Layout --- */
 .dark-footer.anti-vacant {
-    background: transparent; /* Keeping your existing background as requested */
+    background: transparent;
+    /* Keeping your existing background as requested */
     padding: 80px 5%;
     position: relative;
-    color: rgb(255, 255, 255); /* Text color in your photo is dark against the pink */
+    color: rgb(255, 255, 255);
+    /* Text color in your photo is dark against the pink */
 }
 
 .footer-container {
@@ -1027,7 +1103,8 @@ button,
     flex: 1.2;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Aligned to the left per photo */
+    align-items: flex-start;
+    /* Aligned to the left per photo */
     gap: 40px;
 }
 
@@ -1039,7 +1116,8 @@ button,
 }
 
 .partner-logo {
-    height: 140px; /* Scaled to match the large presence in your photo */
+    height: 140px;
+    /* Scaled to match the large presence in your photo */
     width: auto;
     object-fit: contain;
 }
@@ -1057,8 +1135,8 @@ button,
     gap: 20px;
     padding-left: 20px;
     /* Ensure the container doesn't collapse so buttons can expand */
-    width: 100%; 
-    max-width: 300px; 
+    width: 100%;
+    max-width: 300px;
 }
 
 .footer-btn {
@@ -1072,15 +1150,17 @@ button,
     font-size: 1.7rem;
     display: flex;
     align-items: center;
-    justify-content: center; /* Centers the text and icon inside the button */
+    justify-content: center;
+    /* Centers the text and icon inside the button */
     gap: 12px;
     border: 1px solid var(--neon-purple);
-    box-shadow: 0 0 25px rgba(188, 19, 254, 0.7); 
+    box-shadow: 0 0 25px rgba(188, 19, 254, 0.7);
     transition: 0.3s ease;
-    
+
     /* CHANGE THIS: Set a fixed width or use 100% of the container */
-    width: 100%; 
-    box-sizing: border-box; /* Ensures padding doesn't add to the width */
+    width: 100%;
+    box-sizing: border-box;
+    /* Ensures padding doesn't add to the width */
 }
 
 .footer-btn:hover {
@@ -1090,14 +1170,18 @@ button,
 
 /* --- RIGHT SIDE: Institution Info & Links --- */
 .footer-col.right {
-    flex: 1.5; 
-    border-left: 2px solid rgba(255, 255, 255, 0.2); /* Subtle divider */
+    flex: 1.5;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    /* Subtle divider */
     padding-left: 60px;
     display: flex;
-    flex-direction: column; /* Stacks info and links vertically */
+    flex-direction: column;
+    /* Stacks info and links vertically */
     justify-content: flex-start;
-    align-items: flex-start; /* Aligns both children to the left */
-    gap: 30px; /* Space between the address and the links */
+    align-items: flex-start;
+    /* Aligns both children to the left */
+    gap: 30px;
+    /* Space between the address and the links */
 }
 
 .institution-info {
@@ -1121,7 +1205,8 @@ button,
 /* The Link Grid now sits directly under the address */
 .footer-link-grid {
     display: flex;
-    gap: 80px; /* Spreads the two columns of links apart */
+    gap: 80px;
+    /* Spreads the two columns of links apart */
     margin-top: 10px;
 }
 
@@ -1150,7 +1235,8 @@ button,
 }
 
 .social-img {
-    height: 60px; /* Scale icons to match image */
+    height: 60px;
+    /* Scale icons to match image */
     width: auto;
 }
 
@@ -1161,7 +1247,8 @@ button,
     font-weight: bold;
     color: #ffffff;
     font-size: 1rem;
-    border-top: none; /* Removed border to match photo */
+    border-top: none;
+    /* Removed border to match photo */
 }
 
 /* Neon Borders (The Purple Lines) */
@@ -1185,8 +1272,8 @@ button,
 /* --- CTA Banner Styling --- */
 .cta-banner.enhanced-height {
     position: relative;
-    padding: 85px 20px; 
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/Shirt & Mug.png');
+    padding: 85px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/Shirt & Mug.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -1199,15 +1286,18 @@ button,
 
 /* Updated Fonts to match Hero Section */
 .cta-banner .pixel-heading {
-    font-family: var(--font-pixel); /* Matches hero font */
+    font-family: var(--font-pixel);
+    /* Matches hero font */
     font-size: 5.5rem;
     margin-bottom: 10px;
-    text-shadow: 4px 4px 0px #000; /* Matches hero shadow depth */
+    text-shadow: 4px 4px 0px #000;
+    /* Matches hero shadow depth */
     text-transform: uppercase;
 }
 
 .cta-banner .pixel-subheading {
-    font-family: var(--font-pixel); /* Matches hero font */
+    font-family: var(--font-pixel);
+    /* Matches hero font */
     font-size: 3.2rem;
     text-transform: uppercase;
     text-shadow: 2px 2px 0px #000;
@@ -1216,16 +1306,20 @@ button,
 
 /* 3. Anti-Vacant Footer Layout */
 .dark-footer.anti-vacant {
-    background-color: #3b0066; /* Matching the deep purple in your file */
-    padding: 70px 0 30px 0; /* 10% height increase */
+    background-color: #3b0066;
+    /* Matching the deep purple in your file */
+    padding: 70px 0 30px 0;
+    /* 10% height increase */
     position: relative;
 }
 
 .footer-container {
-    max-width: 1300px; /* Wider to avoid compression */
+    max-width: 1300px;
+    /* Wider to avoid compression */
     margin: 0 auto;
     display: flex;
-    justify-content: space-around; /* Spreads content to fill "vacant" areas */
+    justify-content: space-around;
+    /* Spreads content to fill "vacant" areas */
     align-items: flex-start;
 }
 
@@ -1233,12 +1327,14 @@ button,
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items in the left block */
+    align-items: center;
+    /* Center items in the left block */
     gap: 35px;
 }
 
 .footer-col.right {
-    flex: 1.5; /* Gives the text more room to breathe */
+    flex: 1.5;
+    /* Gives the text more room to breathe */
     border-left: 2px solid rgba(255, 255, 255, 0.1);
     padding-left: 80px;
 }
@@ -1254,7 +1350,8 @@ button,
 /* Link Grid Spacing */
 .footer-link-grid {
     display: flex;
-    gap: 60px; /* Spreads the columns */
+    gap: 60px;
+    /* Spreads the columns */
     margin-top: 40px;
 }
 
@@ -1286,7 +1383,7 @@ button,
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .contact-us-pill:hover {
@@ -1297,7 +1394,7 @@ button,
 /* Handshake logic */
 .handshake-emoji {
     font-size: 3rem;
-    filter: drop-shadow(0 0 10px rgba(255,215,0,0.3));
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.3));
 }
 
 .btn-small {
@@ -1318,7 +1415,10 @@ button,
     cursor: pointer;
 }
 
-.btn-small:hover { transform: scale(1.05); box-shadow: 0 0 10px var(--neon-purple); }
+.btn-small:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px var(--neon-purple);
+}
 
 .user-controls a {
     text-decoration: none;
@@ -1326,3 +1426,89 @@ button,
     font-size: 0.9rem;
 }
 
+/* --- 1. Hide Toggle Elements by Default --- */
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    /* Hidden on Desktop */
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background: var(--neon-purple);
+    box-shadow: 0 0 10px var(--neon-purple);
+    transition: 0.3s;
+}
+
+/* --- 2. Mobile & Tablet Styles (Breakpoint) --- */
+@media (max-width: 992px) {
+    .hamburger {
+        display: flex;
+        /* Show icon on Tablet/Mobile */
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        /* Hidden off-screen */
+        width: 70%;
+        height: 100vh;
+        background: rgba(5, 1, 10, 0.95);
+        backdrop-filter: blur(15px);
+        border-left: 2px solid var(--neon-purple);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s ease;
+    }
+
+    nav a {
+        margin: 20px 0;
+        font-size: 1.5rem;
+        /* Bigger for touch */
+    }
+
+    /* Show menu when checkbox is checked */
+    .menu-toggle:checked~nav {
+        right: 0;
+    }
+
+    /* UI Adjustments for Mobile */
+    .pixel-heading {
+        font-size: 2.5rem;
+        /* Shrink giant text so it fits */
+    }
+
+    .hero {
+        height: auto;
+        padding: 120px 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-col.right {
+        padding-left: 0;
+        border-left: none;
+        margin-top: 40px;
+    }
+
+    /* Adjust Overlay Graphics for mobile */
+    .overlay-graphic {
+        display: none;
+        /* Often too cluttered for small screens */
+    }
+}

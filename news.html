@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Link & Ashe | News</title>
+    <title>Link & Ashe | News Terminal</title>
     <link href="https://fonts.googleapis.com/css2?family=VT323&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="header-inner">
-            <div style="display: flex; align-items: center; gap: 10px;">
+            <div class="logo-container">
                 <img src="assets/logols.png" alt="Logo" class="mini-logo">
+                <span>LINK & ASHE</span>
             </div>
             <nav>
                 <a href="index.html">HOME</a>
@@ -21,33 +22,124 @@
                 <a href="merch.html">MERCH</a>
                 <a href="info.html">INFO</a>
             </nav>
-            <nav>
+            <nav class="auth-links">
                 <a href="signin.html">SIGN IN</a>
-                <a href="signup.html">SIGN UP</a>
+                <a href="signup.html" style="color: var(--neon-purple);">SIGN UP</a>
             </nav>
         </div>
     </header>
 
     <div class="page-container">
-        <section style="padding: 100px 5% 60px 5%;">
-            <h1 class="pixel-heading text-center" style="color: var(--neon-purple);">FIRM UPDATES</h1>
-            
-            <div class="grid-container" style="max-width: 1000px; margin: 0 auto;">
-                <div class="glass-card" style="padding: 30px; text-align: left;">
-                    <h3 style="color: var(--neon-purple); margin-bottom: 10px; font-size: 1.8rem;">Project "Neon Horizon" Enters Alpha</h3>
-                    <span style="color: gray; font-size: 0.9rem;">March 21, 2026</span>
-                    <p style="margin-top: 15px;">Our latest retro-cyberpunk action RPG has officially reached the Alpha phase. Internal testing begins next week. Stay tuned for early gameplay footage!</p>
+        <section style="padding: 120px 5% 40px 5%; text-align: center;">
+            <div class="purple-stripes" style="height: 300px; top: 0; opacity: 0.3;"></div>
+            <h1 class="pixel-heading"><span class="neon-text">GLOBAL</span> BROADCAST</h1>
+            <p style="color: gray; font-family: var(--font-pixel); letter-spacing: 2px;">LATEST INTEL // SECURE CONNECTION ESTABLISHED</p>
+        </section>
+
+        <section style="padding: 20px 5% 100px 5%;">
+            <div class="grid-container" style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 30px;">
+                
+                <div class="glass-card" style="padding: 40px; text-align: left; border-left: 5px solid #00ffcc;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <div>
+                            <h3 style="color: #00ffcc; margin-bottom: 5px; font-size: 2.2rem; font-family: var(--font-pixel);">
+                                🌐 LINK & ASHE ACQUIRES SONY INTERACTIVE SUBSIDIARY
+                            </h3>
+                            <span style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">March 24, 2026 // FINANCIAL TIMES</span>
+                        </div>
+                        <span class="btn-small" style="background: #00ffcc; color: black; font-weight: bold; padding: 10px 20px;">ACQUISITION</span>
+                    </div>
+                    <p style="margin-top: 25px; font-size: 1.15rem; line-height: 1.7; color: rgba(255, 255, 255, 0.9);">
+                        In a shocking $4.2 Billion move that has reshaped the industry, Link & Ashe Game Development Firm has officially acquired three major AAA studios previously under Sony. This merger secures our position as the primary developer for next-gen console exclusives through 2030, integrating over 1,500 world-class developers into our ecosystem.
+                    </p>
                 </div>
 
-                <div class="glass-card" style="padding: 30px; text-align: left;">
-                    <h3 style="color: var(--neon-purple); margin-bottom: 10px; font-size: 1.8rem;">New Merchandise Drop</h3>
-                    <span style="color: gray; font-size: 0.9rem;">February 15, 2026</span>
-                    <p style="margin-top: 15px;">We've updated our store with the new Future Concept Keyboard and Nitro Boost Controller. Equip your setup with Link & Ashe gear.</p>
+                <div class="glass-card" style="padding: 40px; text-align: left; border-left: 5px solid var(--neon-purple);">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <div>
+                            <h3 style="color: var(--neon-purple); margin-bottom: 5px; font-size: 2.2rem; font-family: var(--font-pixel);">
+                                🚀 NEW "NEURAL-LINK" ENGINE BREAKS WORLD RECORDS
+                            </h3>
+                            <span style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">March 10, 2026 // TECHCRUNCH</span>
+                        </div>
+                        <span class="btn-small" style="background: var(--neon-purple); color: white; font-weight: bold; padding: 10px 20px;">R&D INNVOVATION</span>
+                    </div>
+                    <p style="margin-top: 25px; font-size: 1.15rem; line-height: 1.7; color: rgba(255, 255, 255, 0.9);">
+                        Our proprietary development engine, "Ashe-Drive 9," has achieved a world-first milestone in partnership with NVIDIA: 16K resolution at a locked 240FPS with zero input latency. This revolutionary rendering technology, combined with our advanced AI, will power the most realistic open-world simulation ever created, "Project Chimera," set for a 2027 reveal.
+                    </p>
                 </div>
+
+                <div class="glass-card" style="padding: 40px; text-align: left; border-left: 5px solid #FFD700;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <div>
+                            <h3 style="color: #FFD700; margin-bottom: 5px; font-size: 2.2rem; font-family: var(--font-pixel);">
+                                🏆 LINK & ASHE NAMED "STUDIO OF THE DECADE"
+                            </h3>
+                            <span style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">March 01, 2026 // THE GAME AWARDS</span>
+                        </div>
+                        <span class="btn-small" style="background: #FFD700; color: black; font-weight: bold; padding: 10px 20px;">AWARDS</span>
+                    </div>
+                    <p style="margin-top: 25px; font-size: 1.15rem; line-height: 1.7; color: rgba(255, 255, 255, 0.9);">
+                        We are incredibly honored to announce that Link & Ashe has been voted "Studio of the Decade" at The Game Awards 2026. This prestigious recognition, decided by a global panel of industry leaders and millions of fans, is a testament to our team's relentless pursuit of innovation, storytelling excellence, and player-first philosophy over the last ten years.
+                    </p>
+                </div>
+
+                <div class="glass-card" style="padding: 40px; text-align: left; border-left: 5px solid gray;">
+                    <h3 style="color: white; margin-bottom: 5px; font-size: 2.0rem; font-family: var(--font-pixel);">
+                        🕹️ Project "Neon Horizon" Enters Alpha
+                    </h3>
+                    <span style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">March 05, 2026 // DEVELOPMENT LOG</span>
+                    <p style="margin-top: 20px; line-height: 1.6;">Our latest retro-cyberpunk action RPG has officially reached the Alpha phase. Internal testing begins next week, focusing on combat balance and procedural dialogue systems. Stay tuned for early gameplay footage!</p>
+                </div>
+
+                <div class="glass-card" style="padding: 40px; text-align: left; border-left: 5px solid #ff32ff;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <div>
+                            <h3 style="color: #ff32ff; margin-bottom: 5px; font-size: 2.2rem; font-family: var(--font-pixel);">
+                                👩‍🚀 PARTNERSHIP WITH NASA: MARS COLONY SIMULATOR
+                            </h3>
+                            <span style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">February 28, 2026 // SPACE.COM</span>
+                        </div>
+                        <span class="btn-small" style="background: #ff32ff; color: white; font-weight: bold; padding: 10px 20px;">PARTNERSHIP</span>
+                    </div>
+                    <p style="margin-top: 25px; font-size: 1.15rem; line-height: 1.7; color: rgba(255, 255, 255, 0.9);">
+                        Link & Ashe has been selected by NASA to develop the official training simulator for the 2030 Mars Mission. Our physics engine was chosen for its "unmatched accuracy" in simulating low-gravity environments, advanced resource management algorithms, and psychological stress modeling, which will prepare astronauts for the multi-year journey.
+                    </p>
+                </div>
+
+                <div class="glass-card" style="padding: 40px; text-align: left; border-left: 5px solid gray;">
+                    <h3 style="color: white; margin-bottom: 5px; font-size: 2.0rem; font-family: var(--font-pixel);">
+                        👕 New Merchandise Drop
+                    </h3>
+                    <span style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">February 15, 2026 // MERCH STORE</span>
+                    <p style="margin-top: 20px; line-height: 1.6;">We've updated our store with the new Future Concept Keyboard and Nitro Boost Controller. Both feature customizable haptic feedback and integration with Ashe-Drive 9. Equip your setup with Link & Ashe gear.</p>
+                </div>
+
+                <div class="glass-card" style="padding: 40px; text-align: left; border-left: 5px solid #00ff00;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <div>
+                            <h3 style="color: #00ff00; margin-bottom: 5px; font-size: 2.2rem; font-family: var(--font-pixel);">
+                                💖 LINK & ASHE DONATES $50M TO GLOBAL EDUCATION
+                            </h3>
+                            <span style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">January 15, 2026 // PRESS RELEASE</span>
+                        </div>
+                        <span class="btn-small" style="background: #00ff00; color: black; font-weight: bold; padding: 10px 20px;">IMPACT</span>
+                    </div>
+                    <p style="margin-top: 25px; font-size: 1.15rem; line-height: 1.7; color: rgba(255, 255, 255, 0.9);">
+                        In our largest philanthropic commitment to date, Link & Ashe is donating $50 Million to the Global Code Initiative, aimed at providing STEM and game development education to underrepresented communities worldwide. Our CEO, Link, stated, "We are investing in the next generation of architects, ensuring the future of interactive entertainment is written by everyone."
+                    </p>
+                </div>
+
             </div>
+        </section>
+
+        <section class="cta-banner enhanced-height" style="border-top: 2px solid var(--neon-purple); min-height: 150px; background: none; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <p style="font-family: var(--font-pixel); color: var(--neon-purple); letter-spacing: 5px; font-size: 1.5rem;">[ END OF TRANSMISSION ]</p>
+            <a href="index.html" class="go-to-news" style="margin-top: 25px;">BACK TO COMMAND CENTER</a>
         </section>
     </div>
 
+    <div id="custom-cursor"></div>
     <script src="main.js"></script>
 </body>
 </html>

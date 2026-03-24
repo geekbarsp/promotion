@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Link & Ashe | Support</title>
+    <title>Link & Ashe | Support Terminal</title>
     <link href="https://fonts.googleapis.com/css2?family=VT323&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body style="background-image: radial-gradient(circle at 50% 50%, #0d011a 0%, #05010a 100%);">
     <header>
         <div class="header-inner">
-            <img src="assets/logols.png" alt="Logo" class="mini-logo">
+            <div class="logo-container">
+                <img src="assets/logols.png" alt="Logo" class="mini-logo">
+                <span style="font-family: var(--font-pixel); letter-spacing: 2px;">L&A SECURE</span>
+            </div>
             <nav>
                 <a href="index.html">HOME</a>
                 <a href="media.html">MEDIA</a>
@@ -19,34 +22,122 @@
                 <a href="merch.html">MERCH</a>
                 <a href="info.html">INFO</a>
             </nav>
-            <nav>
+            <nav class="auth-links">
                 <a href="signin.html">SIGN IN</a>
-                <a href="signup.html">SIGN UP</a>
+                <a href="signup.html" style="color: var(--neon-purple);">SIGN UP</a>
             </nav>
         </div>
     </header>
 
     <div class="page-container">
-        <section style="padding: 100px 5% 60px 5%; text-align: center;">
-            <h1 class="pixel-heading" style="color: var(--neon-purple);">SYSTEM SUPPORT</h1>
-            <p style="font-size: 1.2rem; margin-bottom: 50px;">Need assistance? The Link & Ashe dev team is here to help.</p>
+        <section style="padding: 120px 5% 40px 5%; text-align: center; position: relative;">
+            <h1 class="pixel-heading" style="font-size: 5rem; text-shadow: 0 0 10px #ff32ff;">COMMAND <span class="neon-text">CENTER</span></h1>
+            <div style="display: flex; justify-content: center; gap: 30px; margin-top: 20px; font-family: var(--font-pixel);">
+                <span style="color: #00ffcc;">[ SERVER: ONLINE ]</span>
+                <span style="color: #ff32ff;">[ REGION: GLOBAL ]</span>
+                <span style="color: #FFD700;">[ LATENCY: 24MS ]</span>
+            </div>
+        </section>
+
+        <section style="padding: 20px 5% 100px 5%; display: grid; grid-template-columns: 2fr 1fr; gap: 40px; max-width: 1400px; margin: 0 auto;">
             
-            <div class="grid-container" style="max-width: 900px; margin: 0 auto;">
-                <div class="glass-card" style="padding: 40px;">
-                    <h2 style="font-size: 2rem; margin-bottom: 20px;">Bug Reports</h2>
-                    <p style="margin-bottom: 20px;">Found a glitch in the matrix? Let our engineers know so we can patch it in the next update.</p>
-                    <a href="mailto:bugs@linkandashe.com" class="btn">REPORT A BUG</a>
+            <div class="grid-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                
+                <div class="glass-card secure-file" style="padding: 30px; border-top: 5px solid #ff3232;">
+                    <div class="security-scanline" style="background: rgba(255,50,50,0.1);"></div>
+                    <h2 style="font-family: var(--font-pixel); color: #ff3232;">BUG SUBMISSION</h2>
+                    <p style="color: rgba(255,255,255,0.7); margin: 15px 0;">Found a visual glitch or a crash? Submit your hardware logs here.</p>
+                    <a href="https://discord.gg/aEH9DWtbKK" class="btn" style="border-color: #ff3232; width: 100%; display: block; text-align: center;">UPLOAD LOGS</a>
                 </div>
 
-                <div class="glass-card" style="padding: 40px;">
-                    <h2 style="font-size: 2rem; margin-bottom: 20px;">General Inquiry</h2>
-                    <p style="margin-bottom: 20px;">Questions about merch, orders, or joining our firm? Reach out to our community team.</p>
-                    <a href="mailto:contact@linkandashe.com" class="btn">CONTACT US</a>
+                <div class="glass-card secure-file" style="padding: 30px; border-top: 5px solid var(--neon-purple);">
+                    <h2 style="font-family: var(--font-pixel); color: var(--neon-purple);">GENERAL COMMS</h2>
+                    <p style="color: rgba(255,255,255,0.7); margin: 15px 0;">Career inquiries or merchandise order tracking requests.</p>
+                    <a href="https://discord.gg/aEH9DWtbKK" class="btn" style="width: 100%; display: block; text-align: center;">CONTACT FIRM</a>
+                </div>
+
+                <div class="glass-card secure-file" style="padding: 30px; border-top: 5px solid #00ffcc;">
+                    <h2 style="font-family: var(--font-pixel); color: #00ffcc;">ID RECOVERY</h2>
+                    <p style="color: rgba(255,255,255,0.7); margin: 15px 0;">Issues with your Sign-In or security credentials? Restore access here.</p>
+                    <a href="https://discord.gg/aEH9DWtbKK" class="btn" style="border-color: #00ffcc; color: #00ffcc; width: 100%; display: block; text-align: center;">RESET IDENTITY</a>
+                </div>
+
+                <div class="glass-card secure-file" style="padding: 30px; border-top: 5px solid #FFD700;">
+                    <h2 style="font-family: var(--font-pixel); color: #FFD700;">DEV PARTNERS</h2>
+                    <p style="color: rgba(255,255,255,0.7); margin: 15px 0;">Looking to license Ashe-Drive 9 or collaborate on a project?</p>
+                    <a href="https://discord.gg/aEH9DWtbKK" class="btn" style="border-color: #FFD700; color: #FFD700; width: 100%; display: block; text-align: center;">PROPOSE VENTURE</a>
+                </div>
+            </div>
+
+            <div class="glass-card" style="padding: 30px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.4);">
+                <h3 style="font-family: var(--font-pixel); color: white; border-bottom: 1px solid #ff32ff; padding-bottom: 10px; margin-bottom: 20px;">LIVE DIAGNOSTICS</h3>
+                
+                <div style="font-family: var(--font-pixel); font-size: 0.9rem; line-height: 2;">
+                    <div style="display: flex; justify-content: space-between;">
+                        <span style="color: gray;">API STATUS:</span>
+                        <span style="color: #00ffcc;">STABLE</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span style="color: gray;">MERCH STORE:</span>
+                        <span style="color: #00ffcc;">ACTIVE</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span style="color: gray;">ASHE-DRIVE 9:</span>
+                        <span style="color: #FFD700;">BETA-7</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span style="color: gray;">ACTIVE USERS:</span>
+                        <span style="color: var(--neon-purple);">1,242</span>
+                    </div>
+                </div>
+
+                <div style="margin-top: 30px; padding: 15px; background: rgba(255,50,50,0.1); border-radius: 5px;">
+                    <p style="color: #ff3232; font-family: var(--font-pixel); font-size: 0.8rem;">
+                        [ ALERT ] Scheduled maintenance in 04:12:00.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section style="padding: 0 5% 100px 5%; max-width: 1400px; margin: 0 auto;">
+            <h2 style="font-family: var(--font-pixel); color: white; margin-bottom: 40px; text-align: center;">FREQUENTLY <span class="neon-text">QUERIED</span></h2>
+            <div class="grid-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px;">
+                <div style="border-bottom: 1px solid rgba(255,255,255,0.1); padding: 15px;">
+                    <p style="color: var(--neon-purple); font-family: var(--font-pixel);">Q: When is the next Neon Horizon test?</p>
+                    <p style="color: gray; font-size: 0.9rem;">A: Alpha Phase 2 begins in Late 2026. Join our <a href="https://discord.gg/aEH9DWtbKK" style="color: #00ffcc; text-decoration: underline;">Discord</a> for the key drop.</p>
+                </div>
+                <div style="border-bottom: 1px solid rgba(255,255,255,0.1); padding: 15px;">
+                    <p style="color: var(--neon-purple); font-family: var(--font-pixel);">Q: How do I apply to the firm?</p>
+                    <p style="color: gray; font-size: 0.9rem;">A: Check our <a href="info.html" style="color: #00ffcc; text-decoration: underline;">Info</a> page for the current talent opening list.</p>
                 </div>
             </div>
         </section>
     </div>
 
+    <style>
+        .secure-file {
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .secure-file:hover {
+            transform: scale(1.03);
+            background: rgba(188, 19, 254, 0.05);
+        }
+        .security-scanline {
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            top: 0;
+            animation: scan 6s linear infinite;
+        }
+        @keyframes scan {
+            0% { top: 0; }
+            100% { top: 100%; }
+        }
+    </style>
+
+    <div id="custom-cursor"></div>
     <script src="main.js"></script>
 </body>
 </html>

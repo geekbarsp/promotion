@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link & Ashe | Shipping Logs</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .log-table { width: 100%; border-collapse: collapse; font-family: var(--font-pixel); margin-top: 20px; }
+        .log-table th { color: #ff32ff; text-align: left; padding: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); text-transform: uppercase; letter-spacing: 2px; }
+        .log-table td { padding: 15px; color: #00ffcc; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        
+        /* Status Colors */
+        .status-shipped { color: #00ffcc; text-shadow: 0 0 5px #00ffcc; }
+        .status-pending { color: #FFD700; text-shadow: 0 0 5px #FFD700; }
+        .status-failed { color: #ff3232; text-shadow: 0 0 5px #ff3232; }
+        .status-transit { color: #3299ff; text-shadow: 0 0 5px #3299ff; }
+
+        .review-card { background: rgba(255,255,255,0.02); border-left: 3px solid #ff32ff; padding: 25px; margin-bottom: 25px; transition: 0.3s; }
+        .review-card:hover { background: rgba(188, 19, 254, 0.05); transform: translateX(10px); }
+        
+        .search-container {
+            margin-bottom: 30px;
+            display: flex;
+            gap: 10px;
+        }
+        .log-input {
+            background: #000; border: 1px solid #ff32ff; color: #ff32ff; 
+            padding: 10px; font-family: var(--font-pixel); width: 300px; outline: none;
+        }
+    </style>
+</head>
+<body style="background: #05010a;">
+    <header>
+        <div class="header-inner">
+            <nav><a href="merch.html">← BACK TO ACQUISITION</a></nav>
+            <div style="font-family: var(--font-pixel); color: #ff32ff;">LOG SERVER: ACTIVE</div>
+        </div>
+    </header>
+
+    <div class="page-container" style="padding: 100px 5%;">
+        <h1 class="pixel-heading" style="font-size: 3.5rem;">CARGO <span class="neon-text">MANIFEST</span></h1>
+        <p style="font-family: var(--font-pixel); color: gray; margin-bottom: 40px;">[ SHOWING RECENT 12 TRANSACTIONS ]</p>
+        
+        <div class="search-container">
+            <input type="text" class="log-input" placeholder="ENTER_TRACKING_ID...">
+            <button class="btn log-filter-btn" onclick="filterLogs()">FILTER</button>
+        </div>
+
+        <div class="glass-card" style="overflow-x: auto;">
+            <table class="log-table">
+                <thead>
+                    <tr>
+                        <th>TRACKING ID</th>
+                        <th>DESTINATION</th>
+                        <th>ITEM DEPROYED</th>
+                        <th>STATUS CODE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>#LA-9921</td><td>Manila, PH</td><td>Nitro Controller</td><td class="status-shipped">DELIVERED</td></tr>
+                    <tr><td>#LA-8842</td><td>Tokyo, JP</td><td>Cyber-Grid KB</td><td class="status-transit">IN TRANSIT</td></tr>
+                    <tr><td>#LA-7710</td><td>New York, US</td><td>Apparel Set</td><td class="status-pending">PROCESSING</td></tr>
+                    <tr><td>#LA-6652</td><td>London, UK</td><td>Neural Path Pad</td><td class="status-shipped">SHIPPED</td></tr>
+                    <tr><td>#LA-5521</td><td>Quezon City, PH</td><td>Nitro Controller</td><td class="status-shipped">DELIVERED</td></tr>
+                    <tr><td>#LA-4412</td><td>Seoul, KR</td><td>Future Concept KB</td><td class="status-transit">OUT FOR DELIVERY</td></tr>
+                    <tr><td>#LA-3309</td><td>Berlin, DE</td><td>Apparel Set</td><td class="status-failed">FAILED ATTEMPT</td></tr>
+                    <tr><td>#LA-2298</td><td>Sydney, AU</td><td>Nitro Controller</td><td class="status-shipped">DELIVERED</td></tr>
+                    <tr><td>#LA-1187</td><td>Singapore, SG</td><td>Neural Path Pad</td><td class="status-transit">SORTING</td></tr>
+                    <tr><td>#LA-0076</td><td>Paris, FR</td><td>Cyber-Grid KB</td><td class="status-pending">PREPARING</td></tr>
+                    <tr><td>#LA-9965</td><td>Cebu, PH</td><td>Apparel Set</td><td class="status-shipped">DELIVERED</td></tr>
+                    <tr><td>#LA-8854</td><td>Toronto, CA</td><td>Nitro Controller</td><td class="status-transit">AIR TRANSIT</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="pixel-heading" style="margin-top: 80px; font-size: 2.5rem;">ARCHITECT FEEDBACK</h2>
+        <div style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px;">
+            
+            <div class="review-card">
+                <p style="color: #ff32ff; font-weight: bold;">@Jay_Dev01 <span style="color: gray; font-size: 0.8rem;">- VERIFIED ARCHITECT</span></p>
+                <p style="margin-top: 10px; color: white;">The Nitro Controller haptics are insane. Feels like I'm actually inside the engine code. 10/10 build quality.</p>
+            </div>
+
+            <div class="review-card">
+                <p style="color: #ff32ff; font-weight: bold;">@CyberWitch <span style="color: gray; font-size: 0.8rem;">- VERIFIED ARCHITECT</span></p>
+                <p style="margin-top: 10px; color: white;">Fastest shipping I've seen for international hardware. Packaging was vacuum sealed and neon-themed. No damage during air-transit.</p>
+            </div>
+
+            <div class="review-card">
+                <p style="color: #ff32ff; font-weight: bold;">@Null_Pointer <span style="color: gray; font-size: 0.8rem;">- VERIFIED ARCHITECT</span></p>
+                <p style="margin-top: 10px; color: white;">Keyboard latency is non-existent. My compile times feel faster just looking at it. The switches are buttery smooth.</p>
+            </div>
+
+            <div class="review-card">
+                <p style="color: #ff32ff; font-weight: bold;">@Bit_Crusher <span style="color: gray; font-size: 0.8rem;">- VERIFIED ARCHITECT</span></p>
+                <p style="margin-top: 10px; color: white;">Grabbed the LED Mousepad. The tracking precision is perfect for high-speed UI debugging. The neon purple matches my setup perfectly.</p>
+            </div>
+
+            <div class="review-card">
+                <p style="color: #ff32ff; font-weight: bold;">@Neon_Ghost <span style="color: gray; font-size: 0.8rem;">- VERIFIED ARCHITECT</span></p>
+                <p style="margin-top: 10px; color: white;">Finally, merch that doesn't feel like cheap plastic. The 'Firm' tee is comfortable for 12-hour crunch sessions. Recommending to my whole dev team.</p>
+            </div>
+
+            <div class="review-card">
+                <p style="color: #ff32ff; font-weight: bold;">@Data_Drifter <span style="color: gray; font-size: 0.8rem;">- VERIFIED ARCHITECT</span></p>
+                <p style="margin-top: 10px; color: white;">Transaction via Bitcoin was seamless. Received the digital confirmation instantly. The Link & Ashe infrastructure is top-tier.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <style>
+        /* OVERLAY BLACK & HOVER PURPLE BUTTON */
+.log-filter-btn {
+    background-color: #000000 !important; /* OVERLAY BLACK */
+    color: #00ffcc; /* Cyan text for contrast */
+    border: 1px solid #00ffcc;
+    padding: 10px 25px;
+    font-family: var(--font-pixel);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.log-filter-btn:hover {
+    background-color: #bc13fe !important; /* HOVER PURPLE */
+    color: white !important;
+    border-color: #ff32ff;
+    box-shadow: 0 0 20px rgba(188, 19, 254, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Optional: Add a "Processing" cursor effect */
+.log-filter-btn:active {
+    transform: scale(0.95);
+    background-color: #8a0db5 !important;
+}
+    </style>
+
+    <script>
+        function filterLogs() {
+    const input = document.querySelector('.log-input').value.toUpperCase();
+    const rows = document.querySelectorAll('.log-table tbody tr');
+    
+    rows.forEach(row => {
+        const text = row.innerText.toUpperCase();
+        row.style.display = text.includes(input) ? '' : 'none';
+    });
+    
+    console.log("LOG_SERVER: Filter applied for " + input);
+}
+    </script>
+
+
+    <script src="main.js"></script>
+</body>
+</html>

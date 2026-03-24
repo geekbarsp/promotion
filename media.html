@@ -4,16 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Link & Ashe | Media</title>
+    <title>Link & Ashe | Classified Media</title>
     <link href="https://fonts.googleapis.com/css2?family=VT323&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body style="background-image: radial-gradient(circle at 50% 50%, #0d011a 0%, #05010a 100%);">
     <header>
         <div class="header-inner">
-            <div style="display: flex; align-items: center; gap: 10px;">
+            <div class="logo-container">
                 <img src="assets/logols.png" alt="Logo" class="mini-logo">
+                <span style="font-family: var(--font-pixel); letter-spacing: 2px;">L&A SECURE</span>
             </div>
             <nav>
                 <a href="index.html">HOME</a>
@@ -23,54 +24,188 @@
                 <a href="merch.html">MERCH</a>
                 <a href="info.html">INFO</a>
             </nav>
-            <nav>
+            <nav class="auth-links">
                 <a href="signin.html">SIGN IN</a>
-                <a href="signup.html">SIGN UP</a>
+                <a href="signup.html" style="color: var(--neon-purple);">SIGN UP</a>
             </nav>
         </div>
     </header>
 
     <div class="page-container">
-        <section style="padding: 100px 5% 60px 5%; text-align: center;">
-            <h1 class="pixel-heading" style="color: var(--neon-purple); font-size: 3.5rem;">MEDIA VAULT</h1>
-            <p style="font-size: 1.2rem; margin-bottom: 50px; color: rgba(255,255,255,0.8);">
-                Explore our concept art, gameplay snippets, and development progress.
+        <section style="padding: 120px 5% 40px 5%; text-align: center; position: relative; overflow: hidden;">
+            <div class="glitch-overlay" style="opacity: 0.05;"></div>
+            <h1 class="pixel-heading" style="font-size: 5rem; text-shadow: 0 0 10px #ff32ff, 4px 4px 0px #000;">VAULT <span class="neon-text">ACCESS</span></h1>
+            <p style="font-family: var(--font-pixel); color: #00ffcc; letter-spacing: 3px; margin-top: 15px;">
+                WARNING: CLASSIFIED INTEL // AUTHORIZED PERSONNEL ONLY // 9 FILES RECOVERED
             </p>
+        </section>
 
-            <div class="grid-container" style="max-width: 1200px; margin: 0 auto;">
+        <section style="padding: 20px 5% 100px 5%;">
+            <div class="grid-container" style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 40px;">
                 
-                <div class="glass-card" style="padding-bottom: 15px;">
-                    <img src="assets/media1-placeholder.gif" alt="Gameplay Preview" style="width: 100%; height: 250px; object-fit: cover; border-bottom: 2px solid var(--neon-purple);">
-                    <h3 style="margin-top: 15px; color: white;">Neon Horizon - Alpha Combat</h3>
-                    <p style="color: gray; font-size: 0.9rem;">Gameplay Footage</p>
+                <div class="glass-card secure-file" style="padding: 0; overflow: hidden; border: 1px solid rgba(188,19,254,0.3);">
+                    <div class="security-scanline"></div>
+                    <img src="assets/neon.gif" alt="Teaser" style="width: 100%; height: 320px; object-fit: cover;">
+                    <div style="padding: 25px; border-top: 3px solid #ff32ff; background: rgba(5, 1, 10, 0.7);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; color: #ff32ff;">
+                            <span class="file-tag">[ FILE: 001_ALPHA_TRAILER ]</span>
+                            <span class="status-blink">• DECRYPTED</span>
+                        </div>
+                        <h3 style="margin: 15px 0; color: white; font-family: var(--font-pixel); font-size: 1.8rem;">NEON HORIZON: TEASER</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">Internal teaser cut. Showcasing global lighting synchronization. Status: R&D APPROVED.</p>
+                    </div>
                 </div>
 
-                <div class="glass-card" style="padding-bottom: 15px;">
-                    <img src="assets/media2-placeholder.jpg" alt="Concept Art" style="width: 100%; height: 250px; object-fit: cover; border-bottom: 2px solid var(--neon-purple);">
-                    <h3 style="margin-top: 15px; color: white;">City Sector 7 Design</h3>
-                    <p style="color: gray; font-size: 0.9rem;">Concept Art</p>
+                <div class="glass-card secure-file" style="padding: 0; overflow: hidden; border: 1px solid rgba(0,255,204,0.3);">
+                    <img src="assets/city.webp" alt="Matte Painting" style="width: 100%; height: 320px; object-fit: cover;">
+                    <div style="padding: 25px; border-top: 3px solid #00ffcc; background: rgba(5, 1, 10, 0.7);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; color: #00ffcc;">
+                            <span class="file-tag">[ FILE: 101_SECTOR_MATTE ]</span>
+                            <span class="status-blink">• DECRYPTED</span>
+                        </div>
+                        <h3 style="margin: 15px 0; color: white; font-family: var(--font-pixel); font-size: 1.8rem;">CITY SECTOR 7 RENDER</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">Final environment paint for the central player hub. Integration pending QA approval.</p>
+                    </div>
                 </div>
 
-                <div class="glass-card" style="padding-bottom: 15px;">
-                    <img src="assets/media3-placeholder.gif" alt="Engine Test" style="width: 100%; height: 250px; object-fit: cover; border-bottom: 2px solid var(--neon-purple);">
-                    <h3 style="margin-top: 15px; color: white;">Lighting Physics Engine Test</h3>
-                    <p style="color: gray; font-size: 0.9rem;">Behind the Scenes</p>
+                <div class="glass-card secure-file" style="padding: 0; overflow: hidden; border: 1px solid rgba(188,19,254,0.3);">
+                    <div class="security-scanline"></div>
+                    <img src="assets/light.gif" alt="Light Test" style="width: 100%; height: 320px; object-fit: cover;">
+                    <div style="padding: 25px; border-top: 3px solid var(--neon-purple); background: rgba(5, 1, 10, 0.7);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; color: var(--neon-purple);">
+                            <span class="file-tag">[ FILE: 404_VOLUMETRIC_FOG ]</span>
+                            <span class="status-blink">• DECRYPTED</span>
+                        </div>
+                        <h3 style="margin: 15px 0; color: white; font-family: var(--font-pixel); font-size: 1.8rem;">LIGHTING STRESS TEST</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">Stress test for real-time volumetric smoke density in Ashe-Drive 9.</p>
+                    </div>
                 </div>
 
-                <div class="glass-card" style="padding-bottom: 15px;">
-                    <img src="assets/media4-placeholder.jpg" alt="Character Render" style="width: 100%; height: 250px; object-fit: cover; border-bottom: 2px solid var(--neon-purple);">
-                    <h3 style="margin-top: 15px; color: white;">Main Protagonist 3D Render</h3>
-                    <p style="color: gray; font-size: 0.9rem;">Asset Showcase</p>
+                <div class="glass-card secure-file" style="padding: 0; overflow: hidden; border: 1px solid rgba(255,215,0,0.3);">
+                    <img src="assets/protag.webp" alt="Asset" style="width: 100%; height: 320px; object-fit: cover;">
+                    <div style="padding: 25px; border-top: 3px solid #FFD700; background: rgba(5, 1, 10, 0.7);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; color: #FFD700;">
+                            <span class="file-tag">[ FILE: 007_ASHE_MODEL ]</span>
+                            <span class="status-blink">• DECRYPTED</span>
+                        </div>
+                        <h3 style="margin: 15px 0; color: white; font-family: var(--font-pixel); font-size: 1.8rem;">PROTAGONIST RENDER</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">High-poly asset showcase of 'Ashe'. Featuring modular armor integration.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card secure-file" style="padding: 0; overflow: hidden; border: 1px solid rgba(0,255,204,0.3);">
+                    <img src="assets/car.webp" alt="Vehicle" style="width: 100%; height: 320px; object-fit: cover;">
+                    <div style="padding: 25px; border-top: 3px solid #00ffcc; background: rgba(5, 1, 10, 0.7);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; color: #00ffcc;">
+                            <span class="file-tag">[ FILE: 005_HOVER_RIG ]</span>
+                            <span class="status-blink">• DECRYPTED</span>
+                        </div>
+                        <h3 style="margin: 15px 0; color: white; font-family: var(--font-pixel); font-size: 1.8rem;">VEHICLE PHYSICS LOG</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">Suspension and thruster animation tests for high-speed pursuit sequences.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card secure-file" style="padding: 0; overflow: hidden; border: 1px solid rgba(188,19,254,0.3);">
+                    <img src="assets/diege.webp" alt="UI" style="width: 100%; height: 320px; object-fit: cover;">
+                    <div style="padding: 25px; border-top: 3px solid var(--neon-purple); background: rgba(5, 1, 10, 0.7);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; color: var(--neon-purple);">
+                            <span class="file-tag">[ FILE: 006_HUD_V3 ]</span>
+                            <span class="status-blink">• DECRYPTED</span>
+                        </div>
+                        <h3 style="margin: 15px 0; color: white; font-family: var(--font-pixel); font-size: 1.8rem;">DIEGETIC INTERFACE</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">Designing the in-game holographic menu system for maximum player immersion.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card secure-file" style="padding: 0; overflow: hidden; border: 1px solid rgba(255,50,255,0.3);">
+                    <img src="assets/wave.gif" alt="Audio" style="width: 100%; height: 320px; object-fit: cover;">
+                    <div style="padding: 25px; border-top: 3px solid #ff32ff; background: rgba(5, 1, 10, 0.7);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; color: #ff32ff;">
+                            <span class="file-tag">[ FILE: 007_SFX_WAVE ]</span>
+                            <span class="status-blink">• DECRYPTED</span>
+                        </div>
+                        <h3 style="margin: 15px 0; color: white; font-family: var(--font-pixel); font-size: 1.8rem;">SYNTH OST WAVEFORM</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">Visualizing the Sector 7 Night Market theme music and spatial audio levels.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card secure-file" style="padding: 0; overflow: hidden; border: 1px solid rgba(255,215,0,0.3);">
+                    <img src="assets/motion.gif" alt="Mocap" style="width: 100%; height: 320px; object-fit: contain; background: #111;">
+                    <div style="padding: 25px; border-top: 3px solid #FFD700; background: rgba(5, 1, 10, 0.7);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; color: #FFD700;">
+                            <span class="file-tag">[ FILE: 008_MOCAP_S1 ]</span>
+                            <span class="status-blink">• DECRYPTED</span>
+                        </div>
+                        <h3 style="margin: 15px 0; color: white; font-family: var(--font-pixel); font-size: 1.8rem;">MOTION CAPTURE LOG</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">Recording parkour movement sets for urban traversal and combat flow.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card secure-file" style="padding: 0; overflow: hidden; border: 1px solid rgba(255,50,50,0.3);">
+                    <img src="assets/void.gif" alt="Boss" style="width: 100%; height: 320px; object-fit: cover; filter: hue-rotate(90deg);">
+                    <div style="padding: 25px; border-top: 3px solid #ff3232; background: rgba(5, 1, 10, 0.7);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; color: #ff3232;">
+                            <span class="file-tag">[ FILE: 009_BOSS_VOID ]</span>
+                            <span class="status-blink" style="color: #ff3232;">• WARNING: CRITICAL</span>
+                        </div>
+                        <h3 style="margin: 15px 0; color: white; font-family: var(--font-pixel); font-size: 1.8rem;">'THE VOID' RENDER</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">Classified Boss Asset. Early model for the final encounter encounter logic.</p>
+                    </div>
                 </div>
 
             </div>
 
-            <div style="margin-top: 50px;">
-                <a href="index.html" class="btn">RETURN TO BASE →</a>
+            <div style="margin-top: 90px; text-align: center; border-top: 2px solid rgba(188,19,254,0.1); padding-top: 40px;">
+                <p style="font-family: var(--font-pixel); color: gray; letter-spacing: 3px; margin-bottom: 30px;">[ SESSION END ]</p>
+                <div style="display: flex; justify-content: center; gap: 20px;">
+                    <a href="index.html" class="go-to-merch-glow">← DE-AUTHORIZE & EXIT</a>
+                    <a href="info.html" class="go-to-merch-glow">VIEW DEV INTEL →</a>
+                </div>
             </div>
         </section>
     </div>
 
+    <style>
+        .secure-file {
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        .secure-file:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: #ff32ff;
+            box-shadow: 0 0 30px rgba(255, 50, 255, 0.4);
+        }
+        .file-tag {
+            font-family: var(--font-pixel);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+        }
+        .status-blink {
+            font-family: var(--font-pixel);
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            animation: blink 1.5s step-start infinite;
+        }
+        .security-scanline {
+            width: 100%;
+            height: 2px;
+            background: rgba(188, 19, 254, 0.15);
+            position: absolute;
+            top: 0;
+            z-index: 5;
+            animation: scan 5s linear infinite;
+        }
+        @keyframes scan {
+            0% { top: 0; }
+            100% { top: 100%; }
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+    </style>
+
+    <div id="custom-cursor"></div>
     <script src="main.js"></script>
 </body>
 
