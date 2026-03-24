@@ -228,4 +228,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 500);
   })();
 
+  window.addEventListener('pageshow', function(event) {
+    // If persisted is true, the page was loaded from the bfcache
+    if (event.persisted) {
+        window.location.reload(); // Force a refresh to re-trigger security
+    }
+});
   
