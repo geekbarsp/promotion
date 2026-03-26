@@ -1651,3 +1651,32 @@ button,
         text-align: center;
     }
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Desktop styles go here */
+.container {
+  display: flex;
+}
+
+/* Mobile styles for screens smaller than 768px */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+/* Hidden by default (Mobile) */
+.contact-btn {
+  display: none;
+}
+
+/* Show only on screens larger than 768px (Desktop) */
+@media (min-width: 769px) {
+  .contact-btn {
+    display: inline-block; /* or 'flex' depending on your styling */
+  }
+}
