@@ -1657,11 +1657,6 @@ img {
   height: auto;
 }
 
-/* Desktop styles go here */
-.container {
-  display: flex;
-}
-
 /* Mobile styles for screens smaller than 768px */
 @media (max-width: 768px) {
   .container {
